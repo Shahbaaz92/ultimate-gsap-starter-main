@@ -36,3 +36,15 @@ window.addEventListener("scroll", () => {
     scrollTopBtn.classList.remove("show");
   }
 });
+
+scrollTopBtn.addEventListener("mouseenter", () => {
+  gsap.to(scrollTopBtn, { scale: 1.1, duration: 0.2 });
+});
+
+scrollTopBtn.addEventListener("mouseleave", () => {
+  gsap.to(scrollTopBtn, { scale: 1, duration: 0.2 });
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
