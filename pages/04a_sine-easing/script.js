@@ -16,7 +16,7 @@
 import gsap from "gsap";
 
 const scrollTopBtn = document.querySelector(".scroll-to-top");
-let isFloating = true;
+let isFloating = false;
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 500) {
@@ -25,7 +25,7 @@ window.addEventListener("scroll", () => {
     if (!isFloating) {
       gsap.to(scrollTopBtn, {
         y: -100,
-        duration: 1.5,
+        duration: 2,
         repeat: -1,
         yoyo: true,
         ease: "sine.out",
