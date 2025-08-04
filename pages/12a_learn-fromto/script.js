@@ -3,6 +3,20 @@
 
 // The gsap.fromTo() method is similar to the gsap.from() and gsap.to() methods, but the difference is that the gsap.fromTo() method animates elements from a new state to a new state, while the gsap.from() method animates elements from a new state to their current state, and the gsap.to() method animates elements from their current state to a new state.
 
+//*This is super useful when:
+
+// You need exact control.
+// You're chaining multiple animations.
+// You don't want GSAP to "guess" starting or ending values.
+
+//*📚 .fromTo() Syntax Overview
+//gsap.fromTo(targets, fromVars, toVars);
+
+//! ✅ Tip:
+
+// Only put animatable properties inside fromVars
+// Put animation settings (like duration, ease, delay) inside toVars
+
 import gsap from "gsap";
 
 const bars = document.querySelectorAll(".bar");
