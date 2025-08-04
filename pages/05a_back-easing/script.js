@@ -41,3 +41,5 @@ tabs.forEach((tab) => {
     updateIndicator(tab);
   });
 });
+
+updateIndicator(document.querySelector(".tab.active"));
