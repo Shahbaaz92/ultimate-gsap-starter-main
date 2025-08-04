@@ -20,13 +20,13 @@
 
 // It decides how fast it oscillates.
 // The smaller the value, the quicker the snapping.
-// Select the "Repeat" button
 
 //? When to use?
 //It’s great for onboarding animations, gamified elements, or any attention-grabbing actions. Anything literally that you want to behave like a spring.
 
 import gsap from "gsap";
 
+// Select the "Repeat" button
 const repeat = document.querySelector(".repeat");
 
 // Sample data for each day of the week

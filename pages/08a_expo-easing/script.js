@@ -1,3 +1,14 @@
+//TODO - Expo Ease
+
+//Expo easing in GSAP creates dramatic animations that start or end extremely fast or slow, mimicking exponential acceleration or deceleration.
+
+// It's perfect for effects that need a powerful burst or a sharp, smooth finish.
+
+// The `expo.in` variant begins slowly and speeds up rapidly, ideal for building tension.
+// The `expo.out` starts with a burst of speed and slows dramatically, perfect for clean, techy finishes.
+// The `expo.inOut` combines both, delivering an intense, cinematic feel.
+
+import gsap from "gsap";
 // Select the main floating action button (FAB)
 const fab = document.querySelector(".fab");
 
@@ -30,6 +41,11 @@ fab.addEventListener("click", () => {
       const y = -Math.sin(angle) * radius;
 
       // 🔜 Animation will go here
+      gsap.to(child, {
+        x: x,
+        y: y,
+        opacity: 1,
+      });
     });
   } else {
     children.forEach((child) => {
