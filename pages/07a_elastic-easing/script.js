@@ -1,4 +1,32 @@
+//TODO - Elastic Ease
+
+//That’s the feeling elastic easing creates. It simulates the behavior of a spring or rubber band.
+
+//When something moves with elastic easing, it overshoots the target dramatically and then snaps back with diminishing oscillations before finally settling. This creates a feeling of tension and release.
+//ease: "elastic.in"      // stretches in, like it’s charging up
+//ease: "elastic.out"     // stretches past the target, then settles
+//ease: "elastic.inOut"   // elastic on both ends
+
+//*But it’s not just that. You can completely customize how dramatic it feels:
+// ease: "elastic.out(1, 0.3)"
+
+//! As you can see, elastic accepts two arguments,
+//* Amplitude (1)
+
+// It decides how far it stretches.
+// The higher the value, the bigger the wilder the overshoot.
+
+//* Period (0.3)
+
+// It decides how fast it oscillates.
+// The smaller the value, the quicker the snapping.
 // Select the "Repeat" button
+
+//? When to use?
+//It’s great for onboarding animations, gamified elements, or any attention-grabbing actions. Anything literally that you want to behave like a spring.
+
+import gsap from "gsap";
+
 const repeat = document.querySelector(".repeat");
 
 // Sample data for each day of the week
@@ -47,6 +75,12 @@ function renderChart() {
     chart.appendChild(wrapper);
 
     // 👇 This is where GSAP animation will go later
+    gsap.to(bar, {
+      scaleY: 1,
+      duration: 3,
+      ease: "elastic.out(1, 0.3)",
+      delay: i * 0.1, //nice
+    });
   });
 }
 
