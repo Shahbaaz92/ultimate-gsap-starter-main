@@ -121,3 +121,23 @@ import gsap from "gsap";
 
 //Todo - Stagger in Timelines
 //When you use stagger within a timeline, it acts the same way it does in a single tween - adding those nice delays to each item’s animation. But because you’re in a timeline, everything else stays in perfect sync.
+
+//const tl = gsap.timeline();
+
+// tl.from('h1', {
+//   yPercent: 200,
+//   opacity: 0,
+//   duration: 1,
+//   ease: 'power1.inOut',
+// }).from(
+//   '.box',
+//   {
+//     opacity: 0,
+//     stagger: 0.02, //here
+//     duration: 2,
+//     ease: 'power1.inOut',
+//   },
+//   '<0.5', // Start 0.5 seconds before the previous animation ends
+// );
+
+//Stagger within a timeline like this helps you create layered, natural-looking animations. You’re not just animating in a straight line anymore - you’re adding flow and texture.
