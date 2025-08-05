@@ -98,7 +98,7 @@ import gsap from "gsap";
 // tl.to(".box", { x: 300, duration: 2 }) // box animates for 2s
 //   .to(".circle", { y: 300, duration: 1 }, "<"); // circle starts at same time as box
 
-//">"	- Start at the end of the previous tween.
+//* ">"	- Start at the end of the previous tween.
 //const tl = gsap.timeline();
 
 //tl.to(".box", { x: 300, duration: 2 }) // box animates for 2s
