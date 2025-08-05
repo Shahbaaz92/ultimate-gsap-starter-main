@@ -83,3 +83,41 @@ import gsap from "gsap";
 //* Negative Relative Position
 // A negative relative value like -=0.5 tells GSAP:
 // Start this tween before the previous one ends, to get a seamless overlaps that makes animations feel polished and professional.
+
+//const tl = gsap.timeline();
+// tl.to(".box", { x: 300, duration: 2 }) // .box moves to the right in 2s
+//   .to(".circle", { y: 300, duration: 1 }, "-=0.5"); // .circle moves down, starts 0.5s before .box ends
+
+//*Relative to Others – Precise Timeline Control
+//Sometimes you want to anchor an animation directly to another - no guesswork, no math.
+//That’s where the Relative to Others position parameter comes in!
+
+//In GSAP, "<" and ">" are special symbols that reference the previous tween in the timeline:
+//* "<" -	Start at the start of the previous tween.
+//const tl = gsap.timeline();
+// tl.to(".box", { x: 300, duration: 2 }) // box animates for 2s
+//   .to(".circle", { y: 300, duration: 1 }, "<"); // circle starts at same time as box
+
+//">"	- Start at the end of the previous tween.
+//const tl = gsap.timeline();
+
+//tl.to(".box", { x: 300, duration: 2 }) // box animates for 2s
+//.to(".circle", { y: 300, duration: 1 }, ">"); // circle starts when box ends
+
+//*Fine-tuning with Offsets
+// What if you want an animation to start a bit after or a bit before the start or end of the previous tween? You can add offsets to these relative pointers.
+
+// Example: "<+=0.5" - Starts 0.5 Seconds After Previous Start
+//const tl = gsap.timeline();
+//tl.to(".box", { x: 300, duration: 2 })
+//  .to(".circle", { y: 300, duration: 1 }, "<+=0.5"); // starts 0.5s after box starts
+
+//*Percentage-based values
+// You can use percentages in your position parameter to base offsets on the total duration of the tween being inserted or the previous tween.
+
+//const tl = gsap.timeline();
+//tl.to(".box", { x: 300, duration: 2 })
+//  .to(".circle", { y: 300, duration: 1 }, "-=25%"); // starts 25% of circle's duration before box ends, we can also use offsets "<", ">".
+
+//Todo - Stagger in Timelines
+//When you use stagger within a timeline, it acts the same way it does in a single tween - adding those nice delays to each item’s animation. But because you’re in a timeline, everything else stays in perfect sync.
