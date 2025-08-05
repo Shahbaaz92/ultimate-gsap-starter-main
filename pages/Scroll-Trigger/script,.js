@@ -59,3 +59,7 @@ gsap.to(".box", {
 
 //! Important Note:
 // When using scrub, you always need to define an end value for ScrollTrigger. Without an end, there’s no scroll distance for GSAP to scrub along, so the animation wouldn’t have that smooth, tied-to-scroll feel we’re going for!
+
+//* Pinning the Animaation
+// Pinning an element means it stays fixed in the viewport while you scroll past it.
+// It’s like it’s anchored temporarily before letting the page continue.
